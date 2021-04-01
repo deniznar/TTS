@@ -22,5 +22,11 @@ namespace TTS
             HakkindaKutusu hakkindakutu = new HakkindaKutusu();
             hakkindakutu.Show();
         }
+
+        private void şifreDeğiştirmeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Degistirme degistir = new Degistirme();
+            degistir.Show();
+        }
     }
 }

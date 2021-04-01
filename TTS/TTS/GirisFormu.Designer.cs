@@ -32,18 +32,18 @@
             this.girisGrupKutusu = new System.Windows.Forms.GroupBox();
             this.kapatDugmesi = new System.Windows.Forms.Button();
             this.girisDugmesi = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.sfrMetinKutusu = new System.Windows.Forms.TextBox();
+            this.adMetinKutusu = new System.Windows.Forms.TextBox();
+            this.sfrEtiketi = new System.Windows.Forms.Label();
+            this.adEtiketi = new System.Windows.Forms.Label();
             this.baslikEtiketi = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cteLogosu = new System.Windows.Forms.PictureBox();
+            this.abLogosu = new System.Windows.Forms.PictureBox();
             this.girisGorseli = new System.Windows.Forms.PictureBox();
             this.girisGrupKutusu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cteLogosu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abLogosu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.girisGorseli)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,10 +51,10 @@
             // 
             this.girisGrupKutusu.Controls.Add(this.kapatDugmesi);
             this.girisGrupKutusu.Controls.Add(this.girisDugmesi);
-            this.girisGrupKutusu.Controls.Add(this.textBox2);
-            this.girisGrupKutusu.Controls.Add(this.textBox1);
-            this.girisGrupKutusu.Controls.Add(this.label3);
-            this.girisGrupKutusu.Controls.Add(this.label2);
+            this.girisGrupKutusu.Controls.Add(this.sfrMetinKutusu);
+            this.girisGrupKutusu.Controls.Add(this.adMetinKutusu);
+            this.girisGrupKutusu.Controls.Add(this.sfrEtiketi);
+            this.girisGrupKutusu.Controls.Add(this.adEtiketi);
             this.girisGrupKutusu.Location = new System.Drawing.Point(518, 364);
             this.girisGrupKutusu.Name = "girisGrupKutusu";
             this.girisGrupKutusu.Size = new System.Drawing.Size(347, 173);
@@ -93,40 +93,40 @@
             this.girisDugmesi.UseVisualStyleBackColor = false;
             this.girisDugmesi.Click += new System.EventHandler(this.girisDugmesi_Click);
             // 
-            // textBox2
+            // sfrMetinKutusu
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(115, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(226, 29);
-            this.textBox2.TabIndex = 3;
+            this.sfrMetinKutusu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sfrMetinKutusu.Location = new System.Drawing.Point(115, 63);
+            this.sfrMetinKutusu.Name = "sfrMetinKutusu";
+            this.sfrMetinKutusu.PasswordChar = '*';
+            this.sfrMetinKutusu.Size = new System.Drawing.Size(226, 29);
+            this.sfrMetinKutusu.TabIndex = 3;
             // 
-            // textBox1
+            // adMetinKutusu
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(115, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 29);
-            this.textBox1.TabIndex = 2;
+            this.adMetinKutusu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adMetinKutusu.Location = new System.Drawing.Point(115, 28);
+            this.adMetinKutusu.Name = "adMetinKutusu";
+            this.adMetinKutusu.Size = new System.Drawing.Size(226, 29);
+            this.adMetinKutusu.TabIndex = 2;
             // 
-            // label3
+            // sfrEtiketi
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 21);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Şifre:";
+            this.sfrEtiketi.AutoSize = true;
+            this.sfrEtiketi.Location = new System.Drawing.Point(6, 65);
+            this.sfrEtiketi.Name = "sfrEtiketi";
+            this.sfrEtiketi.Size = new System.Drawing.Size(48, 21);
+            this.sfrEtiketi.TabIndex = 1;
+            this.sfrEtiketi.Text = "Şifre:";
             // 
-            // label2
+            // adEtiketi
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Kullanıcı Adı:";
+            this.adEtiketi.AutoSize = true;
+            this.adEtiketi.Location = new System.Drawing.Point(6, 30);
+            this.adEtiketi.Name = "adEtiketi";
+            this.adEtiketi.Size = new System.Drawing.Size(103, 21);
+            this.adEtiketi.TabIndex = 0;
+            this.adEtiketi.Text = "Kullanıcı Adı:";
             // 
             // baslikEtiketi
             // 
@@ -150,25 +150,25 @@
             this.label1.Text = "© Bu yazılım Bolu T Tipi Kapalı Ceza İnfaz Kurumu Bilgi İşlem Bürosu tarafından y" +
     "apılmış olup tüm hakları saklıdır. 2021";
             // 
-            // pictureBox2
+            // cteLogosu
             // 
-            this.pictureBox2.Image = global::TTS.Properties.Resources.ctelogoblur;
-            this.pictureBox2.Location = new System.Drawing.Point(693, 77);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(172, 211);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.cteLogosu.Image = global::TTS.Properties.Resources.ctelogoblur;
+            this.cteLogosu.Location = new System.Drawing.Point(693, 77);
+            this.cteLogosu.Name = "cteLogosu";
+            this.cteLogosu.Size = new System.Drawing.Size(172, 211);
+            this.cteLogosu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cteLogosu.TabIndex = 5;
+            this.cteLogosu.TabStop = false;
             // 
-            // pictureBox1
+            // abLogosu
             // 
-            this.pictureBox1.Image = global::TTS.Properties.Resources.ablogoblur;
-            this.pictureBox1.Location = new System.Drawing.Point(518, 94);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 171);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.abLogosu.Image = global::TTS.Properties.Resources.ablogoblur;
+            this.abLogosu.Location = new System.Drawing.Point(518, 94);
+            this.abLogosu.Name = "abLogosu";
+            this.abLogosu.Size = new System.Drawing.Size(169, 171);
+            this.abLogosu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.abLogosu.TabIndex = 4;
+            this.abLogosu.TabStop = false;
             // 
             // girisGorseli
             // 
@@ -186,8 +186,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.kapatDugmesi;
             this.ClientSize = new System.Drawing.Size(877, 577);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.cteLogosu);
+            this.Controls.Add(this.abLogosu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.baslikEtiketi);
             this.Controls.Add(this.girisGrupKutusu);
@@ -203,8 +203,8 @@
             this.Text = "TTS: Giriş";
             this.girisGrupKutusu.ResumeLayout(false);
             this.girisGrupKutusu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cteLogosu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abLogosu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.girisGorseli)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -217,14 +217,14 @@
         private System.Windows.Forms.GroupBox girisGrupKutusu;
         private System.Windows.Forms.Label baslikEtiketi;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox abLogosu;
+        private System.Windows.Forms.PictureBox cteLogosu;
         private System.Windows.Forms.Button kapatDugmesi;
         private System.Windows.Forms.Button girisDugmesi;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox sfrMetinKutusu;
+        private System.Windows.Forms.TextBox adMetinKutusu;
+        private System.Windows.Forms.Label sfrEtiketi;
+        private System.Windows.Forms.Label adEtiketi;
     }
 }
 

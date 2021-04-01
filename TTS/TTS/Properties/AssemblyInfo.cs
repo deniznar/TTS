@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TTS")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Ceza infaz kurumu tabipliklerinin takip işlemlerini yapabilmesi amacıyla Bolu T Tipi Kapalı Ceza İnfaz Kurumu Bilgi İşlem Bürosu görevlisi Bilgisayar Teknisyeni Nedim AKCA tarafından geliştirilmiştir. Tüm hakları saklıdır.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TTS")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCompany("Bolu T Tipi Kapalı Ceza İnfaz Kurumu Bilgi İşlem Bürosu")]
+[assembly: AssemblyProduct("Tabiplik Takip Sistemi")]
+[assembly: AssemblyCopyright("Copyright © Nedim AKCA")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

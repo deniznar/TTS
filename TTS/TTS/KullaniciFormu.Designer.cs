@@ -197,6 +197,7 @@
             this.şifreDeğiştirmeToolStripMenuItem.Name = "şifreDeğiştirmeToolStripMenuItem";
             this.şifreDeğiştirmeToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.şifreDeğiştirmeToolStripMenuItem.Text = "Şifre Değiştirme";
+            this.şifreDeğiştirmeToolStripMenuItem.Click += new System.EventHandler(this.şifreDeğiştirmeToolStripMenuItem_Click);
             // 
             // yardımToolStripMenuItem
             // 

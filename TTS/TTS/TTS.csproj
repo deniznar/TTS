@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Degistirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Degistirme.Designer.cs">
+      <DependentUpon>Degistirme.cs</DependentUpon>
+    </Compile>
     <Compile Include="HakkindaKutusu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Degistirme.resx">
+      <DependentUpon>Degistirme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HakkindaKutusu.resx">
       <DependentUpon>HakkindaKutusu.cs</DependentUpon>
     </EmbeddedResource>

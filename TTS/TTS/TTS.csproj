@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>kaynaklar\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlokTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlokTanimlama.Designer.cs">
+      <DependentUpon>BlokTanimlama.cs</DependentUpon>
+    </Compile>
     <Compile Include="Degistirme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,14 +72,137 @@
     <Compile Include="GirisFormu.Designer.cs">
       <DependentUpon>GirisFormu.cs</DependentUpon>
     </Compile>
+    <Compile Include="HukumluTutukluCikisIslemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HukumluTutukluCikisIslemi.Designer.cs">
+      <DependentUpon>HukumluTutukluCikisIslemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HukumluTutukluTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HukumluTutukluTanimlama.Designer.cs">
+      <DependentUpon>HukumluTutukluTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HukumluTutukluSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HukumluTutukluSorgulama.Designer.cs">
+      <DependentUpon>HukumluTutukluSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IlacBilgiGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IlacBilgiGirisi.Designer.cs">
+      <DependentUpon>IlacBilgiGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IlacDagitimRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IlacDagitimRaporu.Designer.cs">
+      <DependentUpon>IlacDagitimRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IlacKullanimBilgileriSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IlacKullanimBilgileriSorgulama.Designer.cs">
+      <DependentUpon>IlacKullanimBilgileriSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IlacKullanimSonlandirma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IlacKullanimSonlandirma.Designer.cs">
+      <DependentUpon>IlacKullanimSonlandirma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IlacTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IlacTanimlama.Designer.cs">
+      <DependentUpon>IlacTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KogusTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KogusTanimlama.Designer.cs">
+      <DependentUpon>KogusTanimlama.cs</DependentUpon>
+    </Compile>
     <Compile Include="KullaniciFormu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KullaniciFormu.Designer.cs">
       <DependentUpon>KullaniciFormu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MuayeneBilgiGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuayeneBilgiGirisi.Designer.cs">
+      <DependentUpon>MuayeneBilgiGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuayeneBilgiGirisiSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuayeneBilgiGirisiSilme.Designer.cs">
+      <DependentUpon>MuayeneBilgiGirisiSilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuayeneBilgileriSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuayeneBilgileriSorgulama.Designer.cs">
+      <DependentUpon>MuayeneBilgileriSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuayeneTalep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuayeneTalep.Designer.cs">
+      <DependentUpon>MuayeneTalep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuayeneTalepSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuayeneTalepSilme.Designer.cs">
+      <DependentUpon>MuayeneTalepSilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuayeneTalepTuruTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuayeneTalepTuruTanimlama.Designer.cs">
+      <DependentUpon>MuayeneTalepTuruTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuayeneyeCikarmaRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuayeneyeCikarmaRaporu.Designer.cs">
+      <DependentUpon>MuayeneyeCikarmaRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeknikDestek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeknikDestek.Designer.cs">
+      <DependentUpon>TeknikDestek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnvanTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnvanTanimlama.Designer.cs">
+      <DependentUpon>UnvanTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UygulamaBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UygulamaBilgileri.Designer.cs">
+      <DependentUpon>UygulamaBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiFormu.Designer.cs">
+      <DependentUpon>YoneticiFormu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BlokTanimlama.resx">
+      <DependentUpon>BlokTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Degistirme.resx">
       <DependentUpon>Degistirme.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,8 +212,56 @@
     <EmbeddedResource Include="GirisFormu.resx">
       <DependentUpon>GirisFormu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HukumluTutukluCikisIslemi.resx">
+      <DependentUpon>HukumluTutukluCikisIslemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HukumluTutukluTanimlama.resx">
+      <DependentUpon>HukumluTutukluTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HukumluTutukluSorgulama.resx">
+      <DependentUpon>HukumluTutukluSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IlacBilgiGirisi.resx">
+      <DependentUpon>IlacBilgiGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IlacDagitimRaporu.resx">
+      <DependentUpon>IlacDagitimRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IlacKullanimBilgileriSorgulama.resx">
+      <DependentUpon>IlacKullanimBilgileriSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IlacKullanimSonlandirma.resx">
+      <DependentUpon>IlacKullanimSonlandirma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IlacTanimlama.resx">
+      <DependentUpon>IlacTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KogusTanimlama.resx">
+      <DependentUpon>KogusTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KullaniciFormu.resx">
       <DependentUpon>KullaniciFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuayeneBilgiGirisi.resx">
+      <DependentUpon>MuayeneBilgiGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuayeneBilgiGirisiSilme.resx">
+      <DependentUpon>MuayeneBilgiGirisiSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuayeneBilgileriSorgulama.resx">
+      <DependentUpon>MuayeneBilgileriSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuayeneTalep.resx">
+      <DependentUpon>MuayeneTalep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuayeneTalepSilme.resx">
+      <DependentUpon>MuayeneTalepSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuayeneTalepTuruTanimlama.resx">
+      <DependentUpon>MuayeneTalepTuruTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuayeneyeCikarmaRaporu.resx">
+      <DependentUpon>MuayeneyeCikarmaRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +273,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TeknikDestek.resx">
+      <DependentUpon>TeknikDestek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnvanTanimlama.resx">
+      <DependentUpon>UnvanTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UygulamaBilgileri.resx">
+      <DependentUpon>UygulamaBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiFormu.resx">
+      <DependentUpon>YoneticiFormu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,7 +302,12 @@
     <Content Include="kaynaklar\ablogoblur.png" />
     <Content Include="kaynaklar\ctelogoblur.png" />
     <Content Include="kaynaklar\doktorvehemsire.png" />
+    <Content Include="kaynaklar\excel-export.png" />
     <Content Include="kaynaklar\favicon.ico" />
+    <Content Include="kaynaklar\informationtechnology.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -26,6 +26,8 @@ namespace TTS
         {
             KullaniciFormu kullaniciform = new KullaniciFormu();
             kullaniciform.Show();
+            YoneticiFormu yoneticiform = new YoneticiFormu();
+            yoneticiform.Show();
         }
     }
 }

@@ -32,14 +32,14 @@
             this.girisGorseli = new System.Windows.Forms.PictureBox();
             this.baslikEtiketi = new System.Windows.Forms.Label();
             this.degistemeGrupKutusu = new System.Windows.Forms.GroupBox();
-            this.sfrEtiketi = new System.Windows.Forms.Label();
-            this.sfrMetinKutusu = new System.Windows.Forms.TextBox();
-            this.ynsfrEtiketi = new System.Windows.Forms.Label();
-            this.ynsfrMetinKutusu = new System.Windows.Forms.TextBox();
-            this.ynsfrtEtiketi = new System.Windows.Forms.Label();
-            this.ynsfrtMetinKutusu = new System.Windows.Forms.TextBox();
-            this.onaylaDugmesi = new System.Windows.Forms.Button();
             this.kapatDugmesi = new System.Windows.Forms.Button();
+            this.onaylaDugmesi = new System.Windows.Forms.Button();
+            this.ynsfrtMetinKutusu = new System.Windows.Forms.TextBox();
+            this.ynsfrtEtiketi = new System.Windows.Forms.Label();
+            this.ynsfrMetinKutusu = new System.Windows.Forms.TextBox();
+            this.ynsfrEtiketi = new System.Windows.Forms.Label();
+            this.sfrMetinKutusu = new System.Windows.Forms.TextBox();
+            this.sfrEtiketi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.girisGorseli)).BeginInit();
             this.degistemeGrupKutusu.SuspendLayout();
             this.SuspendLayout();
@@ -84,53 +84,20 @@
             this.degistemeGrupKutusu.TabStop = false;
             this.degistemeGrupKutusu.Text = "Şifre Değiştirme";
             // 
-            // sfrEtiketi
+            // kapatDugmesi
             // 
-            this.sfrEtiketi.AutoSize = true;
-            this.sfrEtiketi.Location = new System.Drawing.Point(6, 31);
-            this.sfrEtiketi.Name = "sfrEtiketi";
-            this.sfrEtiketi.Size = new System.Drawing.Size(107, 21);
-            this.sfrEtiketi.TabIndex = 0;
-            this.sfrEtiketi.Text = "Mevcut Şifre:";
-            // 
-            // sfrMetinKutusu
-            // 
-            this.sfrMetinKutusu.Location = new System.Drawing.Point(155, 28);
-            this.sfrMetinKutusu.Name = "sfrMetinKutusu";
-            this.sfrMetinKutusu.Size = new System.Drawing.Size(195, 29);
-            this.sfrMetinKutusu.TabIndex = 1;
-            // 
-            // ynsfrEtiketi
-            // 
-            this.ynsfrEtiketi.AutoSize = true;
-            this.ynsfrEtiketi.Location = new System.Drawing.Point(6, 66);
-            this.ynsfrEtiketi.Name = "ynsfrEtiketi";
-            this.ynsfrEtiketi.Size = new System.Drawing.Size(83, 21);
-            this.ynsfrEtiketi.TabIndex = 2;
-            this.ynsfrEtiketi.Text = "Yeni Şifre:";
-            // 
-            // ynsfrMetinKutusu
-            // 
-            this.ynsfrMetinKutusu.Location = new System.Drawing.Point(155, 63);
-            this.ynsfrMetinKutusu.Name = "ynsfrMetinKutusu";
-            this.ynsfrMetinKutusu.Size = new System.Drawing.Size(195, 29);
-            this.ynsfrMetinKutusu.TabIndex = 3;
-            // 
-            // ynsfrtEtiketi
-            // 
-            this.ynsfrtEtiketi.AutoSize = true;
-            this.ynsfrtEtiketi.Location = new System.Drawing.Point(6, 101);
-            this.ynsfrtEtiketi.Name = "ynsfrtEtiketi";
-            this.ynsfrtEtiketi.Size = new System.Drawing.Size(143, 21);
-            this.ynsfrtEtiketi.TabIndex = 4;
-            this.ynsfrtEtiketi.Text = "Yeni Şifre (Tekrar):";
-            // 
-            // ynsfrtMetinKutusu
-            // 
-            this.ynsfrtMetinKutusu.Location = new System.Drawing.Point(155, 98);
-            this.ynsfrtMetinKutusu.Name = "ynsfrtMetinKutusu";
-            this.ynsfrtMetinKutusu.Size = new System.Drawing.Size(195, 29);
-            this.ynsfrtMetinKutusu.TabIndex = 5;
+            this.kapatDugmesi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.kapatDugmesi.BackColor = System.Drawing.Color.DarkGreen;
+            this.kapatDugmesi.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.kapatDugmesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kapatDugmesi.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kapatDugmesi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.kapatDugmesi.Location = new System.Drawing.Point(104, 153);
+            this.kapatDugmesi.Name = "kapatDugmesi";
+            this.kapatDugmesi.Size = new System.Drawing.Size(120, 63);
+            this.kapatDugmesi.TabIndex = 7;
+            this.kapatDugmesi.Text = "KAPAT";
+            this.kapatDugmesi.UseVisualStyleBackColor = false;
             // 
             // onaylaDugmesi
             // 
@@ -146,20 +113,62 @@
             this.onaylaDugmesi.Text = "ONAYLA";
             this.onaylaDugmesi.UseVisualStyleBackColor = false;
             // 
-            // kapatDugmesi
+            // ynsfrtMetinKutusu
             // 
-            this.kapatDugmesi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.kapatDugmesi.BackColor = System.Drawing.Color.DarkGreen;
-            this.kapatDugmesi.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.kapatDugmesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kapatDugmesi.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kapatDugmesi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.kapatDugmesi.Location = new System.Drawing.Point(104, 153);
-            this.kapatDugmesi.Name = "kapatDugmesi";
-            this.kapatDugmesi.Size = new System.Drawing.Size(120, 63);
-            this.kapatDugmesi.TabIndex = 7;
-            this.kapatDugmesi.Text = "KAPAT";
-            this.kapatDugmesi.UseVisualStyleBackColor = false;
+            this.ynsfrtMetinKutusu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ynsfrtMetinKutusu.Location = new System.Drawing.Point(155, 98);
+            this.ynsfrtMetinKutusu.MaxLength = 16;
+            this.ynsfrtMetinKutusu.Name = "ynsfrtMetinKutusu";
+            this.ynsfrtMetinKutusu.PasswordChar = '*';
+            this.ynsfrtMetinKutusu.Size = new System.Drawing.Size(195, 29);
+            this.ynsfrtMetinKutusu.TabIndex = 5;
+            // 
+            // ynsfrtEtiketi
+            // 
+            this.ynsfrtEtiketi.AutoSize = true;
+            this.ynsfrtEtiketi.Location = new System.Drawing.Point(6, 101);
+            this.ynsfrtEtiketi.Name = "ynsfrtEtiketi";
+            this.ynsfrtEtiketi.Size = new System.Drawing.Size(143, 21);
+            this.ynsfrtEtiketi.TabIndex = 4;
+            this.ynsfrtEtiketi.Text = "Yeni Şifre (Tekrar):";
+            // 
+            // ynsfrMetinKutusu
+            // 
+            this.ynsfrMetinKutusu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ynsfrMetinKutusu.Location = new System.Drawing.Point(155, 63);
+            this.ynsfrMetinKutusu.MaxLength = 16;
+            this.ynsfrMetinKutusu.Name = "ynsfrMetinKutusu";
+            this.ynsfrMetinKutusu.PasswordChar = '*';
+            this.ynsfrMetinKutusu.Size = new System.Drawing.Size(195, 29);
+            this.ynsfrMetinKutusu.TabIndex = 3;
+            // 
+            // ynsfrEtiketi
+            // 
+            this.ynsfrEtiketi.AutoSize = true;
+            this.ynsfrEtiketi.Location = new System.Drawing.Point(6, 66);
+            this.ynsfrEtiketi.Name = "ynsfrEtiketi";
+            this.ynsfrEtiketi.Size = new System.Drawing.Size(83, 21);
+            this.ynsfrEtiketi.TabIndex = 2;
+            this.ynsfrEtiketi.Text = "Yeni Şifre:";
+            // 
+            // sfrMetinKutusu
+            // 
+            this.sfrMetinKutusu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sfrMetinKutusu.Location = new System.Drawing.Point(155, 28);
+            this.sfrMetinKutusu.MaxLength = 16;
+            this.sfrMetinKutusu.Name = "sfrMetinKutusu";
+            this.sfrMetinKutusu.PasswordChar = '*';
+            this.sfrMetinKutusu.Size = new System.Drawing.Size(195, 29);
+            this.sfrMetinKutusu.TabIndex = 1;
+            // 
+            // sfrEtiketi
+            // 
+            this.sfrEtiketi.AutoSize = true;
+            this.sfrEtiketi.Location = new System.Drawing.Point(6, 31);
+            this.sfrEtiketi.Name = "sfrEtiketi";
+            this.sfrEtiketi.Size = new System.Drawing.Size(107, 21);
+            this.sfrEtiketi.TabIndex = 0;
+            this.sfrEtiketi.Text = "Mevcut Şifre:";
             // 
             // Degistirme
             // 

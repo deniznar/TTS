@@ -38,13 +38,15 @@
             this.ilaçKullanımSonlandırmaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tanımlamalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hükümlüTutukluTanımlamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hükümlüTutukluÇıkışİşlemiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ilaçTanımlamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blokTanımlamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.koğuşTanımlamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raporlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hükümlüTutukluSorgulamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.muayeneBilgileriSorgulamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ilaçKullanımSorgulamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ilaçKullanımBilgileriSorgulamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.muayeneyeÇıkarmaRaporuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ilaçDağıtımRaporuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kullanıcıİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.şifreDeğiştirmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +54,15 @@
             this.yardımıGörüntüleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teknikDestekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hakkındaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ilacKullanimiBiteceklerGrupKutusu = new System.Windows.Forms.GroupBox();
+            this.ilacKullanimiBiteceklerVeriTablosu = new System.Windows.Forms.DataGridView();
+            this.muayeneOlacaklarGrupKutusu = new System.Windows.Forms.GroupBox();
+            this.muayeneOlacaklarVeriTablosu = new System.Windows.Forms.DataGridView();
             this.menuCubugu.SuspendLayout();
+            this.ilacKullanimiBiteceklerGrupKutusu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ilacKullanimiBiteceklerVeriTablosu)).BeginInit();
+            this.muayeneOlacaklarGrupKutusu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.muayeneOlacaklarVeriTablosu)).BeginInit();
             this.SuspendLayout();
             // 
             // menuCubugu
@@ -67,7 +77,7 @@
             this.yardımToolStripMenuItem});
             this.menuCubugu.Location = new System.Drawing.Point(0, 0);
             this.menuCubugu.Name = "menuCubugu";
-            this.menuCubugu.Size = new System.Drawing.Size(1082, 29);
+            this.menuCubugu.Size = new System.Drawing.Size(1164, 29);
             this.menuCubugu.TabIndex = 0;
             this.menuCubugu.Text = "menuStrip1";
             // 
@@ -86,12 +96,14 @@
             this.muayeneTalepToolStripMenuItem.Name = "muayeneTalepToolStripMenuItem";
             this.muayeneTalepToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.muayeneTalepToolStripMenuItem.Text = "Muayene Talep";
+            this.muayeneTalepToolStripMenuItem.Click += new System.EventHandler(this.muayeneTalepToolStripMenuItem_Click);
             // 
             // muayeneBilgiGirişiToolStripMenuItem
             // 
             this.muayeneBilgiGirişiToolStripMenuItem.Name = "muayeneBilgiGirişiToolStripMenuItem";
             this.muayeneBilgiGirişiToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.muayeneBilgiGirişiToolStripMenuItem.Text = "Muayene Bilgi Girişi";
+            this.muayeneBilgiGirişiToolStripMenuItem.Click += new System.EventHandler(this.muayeneBilgiGirişiToolStripMenuItem_Click);
             // 
             // ilaçToolStripMenuItem
             // 
@@ -107,17 +119,20 @@
             this.ilaçBilgiGirişiToolStripMenuItem.Name = "ilaçBilgiGirişiToolStripMenuItem";
             this.ilaçBilgiGirişiToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
             this.ilaçBilgiGirişiToolStripMenuItem.Text = "İlaç Bilgi Girişi";
+            this.ilaçBilgiGirişiToolStripMenuItem.Click += new System.EventHandler(this.ilaçBilgiGirişiToolStripMenuItem_Click);
             // 
             // ilaçKullanımSonlandırmaToolStripMenuItem
             // 
             this.ilaçKullanımSonlandırmaToolStripMenuItem.Name = "ilaçKullanımSonlandırmaToolStripMenuItem";
             this.ilaçKullanımSonlandırmaToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
             this.ilaçKullanımSonlandırmaToolStripMenuItem.Text = "İlaç Kullanım Sonlandırma";
+            this.ilaçKullanımSonlandırmaToolStripMenuItem.Click += new System.EventHandler(this.ilaçKullanımSonlandırmaToolStripMenuItem_Click);
             // 
             // tanımlamalarToolStripMenuItem
             // 
             this.tanımlamalarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hükümlüTutukluTanımlamaToolStripMenuItem,
+            this.hükümlüTutukluÇıkışİşlemiToolStripMenuItem,
             this.ilaçTanımlamaToolStripMenuItem,
             this.blokTanımlamaToolStripMenuItem,
             this.koğuşTanımlamaToolStripMenuItem});
@@ -128,33 +143,45 @@
             // hükümlüTutukluTanımlamaToolStripMenuItem
             // 
             this.hükümlüTutukluTanımlamaToolStripMenuItem.Name = "hükümlüTutukluTanımlamaToolStripMenuItem";
-            this.hükümlüTutukluTanımlamaToolStripMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.hükümlüTutukluTanımlamaToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
             this.hükümlüTutukluTanımlamaToolStripMenuItem.Text = "Hükümlü/Tutuklu Tanımlama";
+            this.hükümlüTutukluTanımlamaToolStripMenuItem.Click += new System.EventHandler(this.hükümlüTutukluTanımlamaToolStripMenuItem_Click);
+            // 
+            // hükümlüTutukluÇıkışİşlemiToolStripMenuItem
+            // 
+            this.hükümlüTutukluÇıkışİşlemiToolStripMenuItem.Name = "hükümlüTutukluÇıkışİşlemiToolStripMenuItem";
+            this.hükümlüTutukluÇıkışİşlemiToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
+            this.hükümlüTutukluÇıkışİşlemiToolStripMenuItem.Text = "Hükümlü/Tutuklu Çıkış İşlemi";
+            this.hükümlüTutukluÇıkışİşlemiToolStripMenuItem.Click += new System.EventHandler(this.hükümlüTutukluÇıkışİşlemiToolStripMenuItem_Click);
             // 
             // ilaçTanımlamaToolStripMenuItem
             // 
             this.ilaçTanımlamaToolStripMenuItem.Name = "ilaçTanımlamaToolStripMenuItem";
-            this.ilaçTanımlamaToolStripMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.ilaçTanımlamaToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
             this.ilaçTanımlamaToolStripMenuItem.Text = "İlaç Tanımlama";
+            this.ilaçTanımlamaToolStripMenuItem.Click += new System.EventHandler(this.ilaçTanımlamaToolStripMenuItem_Click);
             // 
             // blokTanımlamaToolStripMenuItem
             // 
             this.blokTanımlamaToolStripMenuItem.Name = "blokTanımlamaToolStripMenuItem";
-            this.blokTanımlamaToolStripMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.blokTanımlamaToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
             this.blokTanımlamaToolStripMenuItem.Text = "Blok Tanımlama";
+            this.blokTanımlamaToolStripMenuItem.Click += new System.EventHandler(this.blokTanımlamaToolStripMenuItem_Click);
             // 
             // koğuşTanımlamaToolStripMenuItem
             // 
             this.koğuşTanımlamaToolStripMenuItem.Name = "koğuşTanımlamaToolStripMenuItem";
-            this.koğuşTanımlamaToolStripMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.koğuşTanımlamaToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
             this.koğuşTanımlamaToolStripMenuItem.Text = "Koğuş Tanımlama";
+            this.koğuşTanımlamaToolStripMenuItem.Click += new System.EventHandler(this.koğuşTanımlamaToolStripMenuItem_Click);
             // 
             // raporlarToolStripMenuItem
             // 
             this.raporlarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hükümlüTutukluSorgulamaToolStripMenuItem,
             this.muayeneBilgileriSorgulamaToolStripMenuItem,
-            this.ilaçKullanımSorgulamaToolStripMenuItem,
+            this.ilaçKullanımBilgileriSorgulamaToolStripMenuItem,
+            this.muayeneyeÇıkarmaRaporuToolStripMenuItem,
             this.ilaçDağıtımRaporuToolStripMenuItem});
             this.raporlarToolStripMenuItem.Name = "raporlarToolStripMenuItem";
             this.raporlarToolStripMenuItem.Size = new System.Drawing.Size(84, 25);
@@ -163,26 +190,37 @@
             // hükümlüTutukluSorgulamaToolStripMenuItem
             // 
             this.hükümlüTutukluSorgulamaToolStripMenuItem.Name = "hükümlüTutukluSorgulamaToolStripMenuItem";
-            this.hükümlüTutukluSorgulamaToolStripMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.hükümlüTutukluSorgulamaToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
             this.hükümlüTutukluSorgulamaToolStripMenuItem.Text = "Hükümlü/Tutuklu Sorgulama";
+            this.hükümlüTutukluSorgulamaToolStripMenuItem.Click += new System.EventHandler(this.hükümlüTutukluSorgulamaToolStripMenuItem_Click);
             // 
             // muayeneBilgileriSorgulamaToolStripMenuItem
             // 
             this.muayeneBilgileriSorgulamaToolStripMenuItem.Name = "muayeneBilgileriSorgulamaToolStripMenuItem";
-            this.muayeneBilgileriSorgulamaToolStripMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.muayeneBilgileriSorgulamaToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
             this.muayeneBilgileriSorgulamaToolStripMenuItem.Text = "Muayene Bilgileri Sorgulama";
+            this.muayeneBilgileriSorgulamaToolStripMenuItem.Click += new System.EventHandler(this.muayeneBilgileriSorgulamaToolStripMenuItem_Click);
             // 
-            // ilaçKullanımSorgulamaToolStripMenuItem
+            // ilaçKullanımBilgileriSorgulamaToolStripMenuItem
             // 
-            this.ilaçKullanımSorgulamaToolStripMenuItem.Name = "ilaçKullanımSorgulamaToolStripMenuItem";
-            this.ilaçKullanımSorgulamaToolStripMenuItem.Size = new System.Drawing.Size(288, 26);
-            this.ilaçKullanımSorgulamaToolStripMenuItem.Text = "İlaç Kullanım Sorgulama";
+            this.ilaçKullanımBilgileriSorgulamaToolStripMenuItem.Name = "ilaçKullanımBilgileriSorgulamaToolStripMenuItem";
+            this.ilaçKullanımBilgileriSorgulamaToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
+            this.ilaçKullanımBilgileriSorgulamaToolStripMenuItem.Text = "İlaç Kullanım Bilgileri Sorgulama";
+            this.ilaçKullanımBilgileriSorgulamaToolStripMenuItem.Click += new System.EventHandler(this.ilaçKullanımBilgileriSorgulamaToolStripMenuItem_Click);
+            // 
+            // muayeneyeÇıkarmaRaporuToolStripMenuItem
+            // 
+            this.muayeneyeÇıkarmaRaporuToolStripMenuItem.Name = "muayeneyeÇıkarmaRaporuToolStripMenuItem";
+            this.muayeneyeÇıkarmaRaporuToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
+            this.muayeneyeÇıkarmaRaporuToolStripMenuItem.Text = "Muayeneye Çıkarma Raporu";
+            this.muayeneyeÇıkarmaRaporuToolStripMenuItem.Click += new System.EventHandler(this.muayeneyeÇıkarmaRaporuToolStripMenuItem_Click);
             // 
             // ilaçDağıtımRaporuToolStripMenuItem
             // 
             this.ilaçDağıtımRaporuToolStripMenuItem.Name = "ilaçDağıtımRaporuToolStripMenuItem";
-            this.ilaçDağıtımRaporuToolStripMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.ilaçDağıtımRaporuToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
             this.ilaçDağıtımRaporuToolStripMenuItem.Text = "İlaç Dağıtım Raporu";
+            this.ilaçDağıtımRaporuToolStripMenuItem.Click += new System.EventHandler(this.ilaçDağıtımRaporuToolStripMenuItem_Click);
             // 
             // kullanıcıİşlemleriToolStripMenuItem
             // 
@@ -221,6 +259,7 @@
             this.teknikDestekToolStripMenuItem.Name = "teknikDestekToolStripMenuItem";
             this.teknikDestekToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.teknikDestekToolStripMenuItem.Text = "Teknik Destek";
+            this.teknikDestekToolStripMenuItem.Click += new System.EventHandler(this.teknikDestekToolStripMenuItem_Click);
             // 
             // hakkındaToolStripMenuItem
             // 
@@ -229,22 +268,80 @@
             this.hakkındaToolStripMenuItem.Text = "Hakkında";
             this.hakkındaToolStripMenuItem.Click += new System.EventHandler(this.hakkındaToolStripMenuItem_Click);
             // 
+            // ilacKullanimiBiteceklerGrupKutusu
+            // 
+            this.ilacKullanimiBiteceklerGrupKutusu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ilacKullanimiBiteceklerGrupKutusu.Controls.Add(this.ilacKullanimiBiteceklerVeriTablosu);
+            this.ilacKullanimiBiteceklerGrupKutusu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ilacKullanimiBiteceklerGrupKutusu.Location = new System.Drawing.Point(12, 32);
+            this.ilacKullanimiBiteceklerGrupKutusu.Name = "ilacKullanimiBiteceklerGrupKutusu";
+            this.ilacKullanimiBiteceklerGrupKutusu.Size = new System.Drawing.Size(662, 638);
+            this.ilacKullanimiBiteceklerGrupKutusu.TabIndex = 1;
+            this.ilacKullanimiBiteceklerGrupKutusu.TabStop = false;
+            this.ilacKullanimiBiteceklerGrupKutusu.Text = "İlaç Kullanımı Bitecekler";
+            // 
+            // ilacKullanimiBiteceklerVeriTablosu
+            // 
+            this.ilacKullanimiBiteceklerVeriTablosu.AllowUserToAddRows = false;
+            this.ilacKullanimiBiteceklerVeriTablosu.AllowUserToDeleteRows = false;
+            this.ilacKullanimiBiteceklerVeriTablosu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ilacKullanimiBiteceklerVeriTablosu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ilacKullanimiBiteceklerVeriTablosu.Location = new System.Drawing.Point(3, 25);
+            this.ilacKullanimiBiteceklerVeriTablosu.Name = "ilacKullanimiBiteceklerVeriTablosu";
+            this.ilacKullanimiBiteceklerVeriTablosu.ReadOnly = true;
+            this.ilacKullanimiBiteceklerVeriTablosu.Size = new System.Drawing.Size(656, 610);
+            this.ilacKullanimiBiteceklerVeriTablosu.TabIndex = 0;
+            // 
+            // muayeneOlacaklarGrupKutusu
+            // 
+            this.muayeneOlacaklarGrupKutusu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.muayeneOlacaklarGrupKutusu.Controls.Add(this.muayeneOlacaklarVeriTablosu);
+            this.muayeneOlacaklarGrupKutusu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.muayeneOlacaklarGrupKutusu.Location = new System.Drawing.Point(680, 32);
+            this.muayeneOlacaklarGrupKutusu.Name = "muayeneOlacaklarGrupKutusu";
+            this.muayeneOlacaklarGrupKutusu.Size = new System.Drawing.Size(472, 638);
+            this.muayeneOlacaklarGrupKutusu.TabIndex = 2;
+            this.muayeneOlacaklarGrupKutusu.TabStop = false;
+            this.muayeneOlacaklarGrupKutusu.Text = "Muayene Olacaklar";
+            // 
+            // muayeneOlacaklarVeriTablosu
+            // 
+            this.muayeneOlacaklarVeriTablosu.AllowUserToAddRows = false;
+            this.muayeneOlacaklarVeriTablosu.AllowUserToDeleteRows = false;
+            this.muayeneOlacaklarVeriTablosu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.muayeneOlacaklarVeriTablosu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.muayeneOlacaklarVeriTablosu.Location = new System.Drawing.Point(3, 25);
+            this.muayeneOlacaklarVeriTablosu.Name = "muayeneOlacaklarVeriTablosu";
+            this.muayeneOlacaklarVeriTablosu.ReadOnly = true;
+            this.muayeneOlacaklarVeriTablosu.Size = new System.Drawing.Size(466, 610);
+            this.muayeneOlacaklarVeriTablosu.TabIndex = 0;
+            // 
             // KullaniciFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 657);
+            this.ClientSize = new System.Drawing.Size(1164, 682);
+            this.Controls.Add(this.muayeneOlacaklarGrupKutusu);
+            this.Controls.Add(this.ilacKullanimiBiteceklerGrupKutusu);
             this.Controls.Add(this.menuCubugu);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuCubugu;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimizeBox = false;
             this.Name = "KullaniciFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TTS: Kullanıcı";
             this.menuCubugu.ResumeLayout(false);
             this.menuCubugu.PerformLayout();
+            this.ilacKullanimiBiteceklerGrupKutusu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ilacKullanimiBiteceklerVeriTablosu)).EndInit();
+            this.muayeneOlacaklarGrupKutusu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.muayeneOlacaklarVeriTablosu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,7 +364,7 @@
         private System.Windows.Forms.ToolStripMenuItem raporlarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hükümlüTutukluSorgulamaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem muayeneBilgileriSorgulamaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ilaçKullanımSorgulamaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ilaçKullanımBilgileriSorgulamaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ilaçDağıtımRaporuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kullanıcıİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem şifreDeğiştirmeToolStripMenuItem;
@@ -275,5 +372,11 @@
         private System.Windows.Forms.ToolStripMenuItem yardımıGörüntüleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem teknikDestekToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hakkındaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hükümlüTutukluÇıkışİşlemiToolStripMenuItem;
+        private System.Windows.Forms.GroupBox ilacKullanimiBiteceklerGrupKutusu;
+        private System.Windows.Forms.GroupBox muayeneOlacaklarGrupKutusu;
+        private System.Windows.Forms.ToolStripMenuItem muayeneyeÇıkarmaRaporuToolStripMenuItem;
+        private System.Windows.Forms.DataGridView ilacKullanimiBiteceklerVeriTablosu;
+        private System.Windows.Forms.DataGridView muayeneOlacaklarVeriTablosu;
     }
 }

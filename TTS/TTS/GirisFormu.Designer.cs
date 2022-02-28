@@ -37,7 +37,7 @@
             this.sfrEtiketi = new System.Windows.Forms.Label();
             this.adEtiketi = new System.Windows.Forms.Label();
             this.baslikEtiketi = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lisansEtiketi = new System.Windows.Forms.Label();
             this.cteLogosu = new System.Windows.Forms.PictureBox();
             this.abLogosu = new System.Windows.Forms.PictureBox();
             this.girisGorseli = new System.Windows.Forms.PictureBox();
@@ -97,6 +97,7 @@
             // 
             this.sfrMetinKutusu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sfrMetinKutusu.Location = new System.Drawing.Point(115, 63);
+            this.sfrMetinKutusu.MaxLength = 16;
             this.sfrMetinKutusu.Name = "sfrMetinKutusu";
             this.sfrMetinKutusu.PasswordChar = '*';
             this.sfrMetinKutusu.Size = new System.Drawing.Size(226, 29);
@@ -106,6 +107,7 @@
             // 
             this.adMetinKutusu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adMetinKutusu.Location = new System.Drawing.Point(115, 28);
+            this.adMetinKutusu.MaxLength = 16;
             this.adMetinKutusu.Name = "adMetinKutusu";
             this.adMetinKutusu.Size = new System.Drawing.Size(226, 29);
             this.adMetinKutusu.TabIndex = 2;
@@ -139,15 +141,15 @@
             this.baslikEtiketi.TabIndex = 2;
             this.baslikEtiketi.Text = "TTS: Tabiplik Takip Sistemi";
             // 
-            // label1
+            // lisansEtiketi
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(8, 546);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(862, 21);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "© Bu yazılım Bolu T Tipi Kapalı Ceza İnfaz Kurumu Bilgi İşlem Bürosu tarafından y" +
+            this.lisansEtiketi.AutoSize = true;
+            this.lisansEtiketi.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lisansEtiketi.Location = new System.Drawing.Point(8, 546);
+            this.lisansEtiketi.Name = "lisansEtiketi";
+            this.lisansEtiketi.Size = new System.Drawing.Size(862, 21);
+            this.lisansEtiketi.TabIndex = 3;
+            this.lisansEtiketi.Text = "© Bu yazılım Bolu T Tipi Kapalı Ceza İnfaz Kurumu Bilgi İşlem Bürosu tarafından y" +
     "apılmış olup tüm hakları saklıdır. 2021";
             // 
             // cteLogosu
@@ -188,7 +190,7 @@
             this.ClientSize = new System.Drawing.Size(877, 577);
             this.Controls.Add(this.cteLogosu);
             this.Controls.Add(this.abLogosu);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lisansEtiketi);
             this.Controls.Add(this.baslikEtiketi);
             this.Controls.Add(this.girisGrupKutusu);
             this.Controls.Add(this.girisGorseli);
@@ -216,7 +218,7 @@
         private System.Windows.Forms.PictureBox girisGorseli;
         private System.Windows.Forms.GroupBox girisGrupKutusu;
         private System.Windows.Forms.Label baslikEtiketi;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lisansEtiketi;
         private System.Windows.Forms.PictureBox abLogosu;
         private System.Windows.Forms.PictureBox cteLogosu;
         private System.Windows.Forms.Button kapatDugmesi;
